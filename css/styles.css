@@ -25,7 +25,7 @@ body{
 }
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
 }
 
@@ -34,12 +34,22 @@ body{
 }
 
 .navegacion-principal{    
-    display: flex; /* Habilita el uso de flexbox */        
-    justify-content: space-evenly;  /* La barra de navegacion se disrtribuye */
-    /* align-items: ; //Es utilizado para centrar contenido cuando se maneja en una columna */
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column;       
+    
+    /* align-items: center; //Es utilizado para centrar contenido cuando se maneja en una columna */
+}
+
+@media(min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-evenly;  /* La barra de navegacion se disrtribuye */
+    }
 }
 
 .navegacion-principal a{
+    display: block;
+    text-align: center;
     padding: 1rem;
     color: var(--blanco);
     text-decoration: none;   
