@@ -33,12 +33,24 @@ body{
     background-color: var(--secundario);    
 }
 
-.navegacion-principal{
-    padding: 1rem;
+.navegacion-principal{    
+    display: flex; /* Habilita el uso de flexbox */        
+    justify-content: space-evenly;  /* La barra de navegacion se disrtribuye */
+    /* align-items: ; //Es utilizado para centrar contenido cuando se maneja en una columna */
 }
 
 .navegacion-principal a{
+    padding: 1rem;
     color: var(--blanco);
     text-decoration: none;   
+    font-size: 2rem;
+    font-weight: 700;
 }
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+
 
